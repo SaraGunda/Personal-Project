@@ -1,0 +1,127 @@
+:root {
+    --teal: #a0c3bd;
+    --grey: #666666;
+    --medium-grey: #CCCCCC;
+    --light-grey: #F9F9F9;
+    --white: #ffffff;
+    --light-purple: #ba8fce;
+    --dark-purple: #84589c;
+}
+
+/* loginpage */
+.container {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+form {
+    background-color: var(--light-grey);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    padding: 2% 5% 5% 5%;
+    margin: 5% 0;
+    border-radius: 8px;
+    /* max-width: 500px; */
+}
+
+label {
+    font-size: .8rem;
+    text-transform: uppercase;
+}
+
+h3 {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin-bottom: 3%;
+    /* ADD YOUR OWN CODE BELOW */
+    text-align: center;
+}
+
+.form-group {
+    margin: 0 0 2% 0;
+    min-width: 100%;
+    padding: 0;
+    width: 100%;
+}
+
+.form-group-required {
+    color: var(--dark-purple);
+}
+
+body {
+    background-color: var(--teal);
+    color: var(--grey);
+    font-family:'Tajawal';
+    line-height: 25px;
+    font-size: 1.1rem;
+}
+
+button[type="submit"] {
+    background-color: var(--light-purple);
+    color: var(--white);
+    width: 100%;
+    border: none;
+    margin: 0 0 2% 0;
+    padding: 2%;
+    font-size: 1rem;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--dark-purple);
+}
+
+button[type="submit"]:active {
+    outline: none;
+}
+
+input:focus,
+textarea:focus {
+    border: 1px solid var(--grey);
+    outline: none;
+}
+
+/* top nav */
+.topnav {
+    background-color: var(--light-purple);
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerul {
+	list-style-type: none;
+	display: flex;
+    justify-content: space-around;
+	text-transform: uppercase;
+    padding-left: 0;
+    width: 40%;
+    font-family: 'Tajawal';
+}
+
+/* footer  */
+footer {
+    background-color: var(--light-purple);
+    color: var(--white);
+    border-top: 5px solid var(--grey);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-family: 'Tajawal';
+}
+
+.footerul {
+    list-style-type: none;
+    padding-left: 0;
+    font-family: 'Tajawal';
+}
+
+.footerulsocial {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    padding-left: 0;
+}
+
