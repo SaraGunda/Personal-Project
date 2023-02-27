@@ -15,24 +15,128 @@
     />
   </head>
   <body>
-    <!-- Questions for quiz -->
-    <!--
-Hello!  Welcome to YogaMatch!  Let's get started.
-1)  What's your name?
-2)  What's your age?
-    Ans: 18-24, 25-35, 26-45, 46-55, 56-65, 66+, Prefer not to answer
-3) What's your activity level?
-    Ans: High = 5+ hours per week, Medium = 2-4 hours per week, Low = 0-1 hour per week
-4) Any injuries?
-    Ans: (select multiple) None, Knee, Shoulder, Back, Wrist, Ankle/foot
-5) What would you like to get out of your practice?
-    Ans: (select multiple) Relaxation and restoration, a workout, improved flexibility, improved balance
-6) How frequently would you like to practice yoga?
-    Ans: once per month, once every other week, once per week, 2-3 times per week, everyday
-7) 
-8)
-9)
-10)
-  -->
+    <div class="topnav">
+      <!-- <div class="head">
+          <img
+            <class="navlogo"
+            src="XXXXXX"
+            alt="logo" -->
+      <!-- </div> -->
+      <ul class="headerul">
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+      <a href="javascript:void(0);" class="menu-icon">
+        <i class="fa fa-bars fa-2x"></i>
+      </a>
+    </div>
+      <form>
+        <h3>Find Your Flow</h3>
+        <div class="form-group">
+          <label for="name"
+            >Your Name <span class="form-group-required">*</span></label
+          >
+          <input
+            type="name"
+            name="name"
+            id="name"
+            placeholder="Your Name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="age"
+            >What is your age? <span class="form-group-required">*</span></label
+          >
+          <input
+            type="age"
+            name="age"
+            id="age"
+            placeholder="Enter your age"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="activityLevel"
+            >What is your activity level? <span class="form-group-required">*</span></label
+          >
+          <br>
+          <!-- remove breaks after css  -->
+          <input type="radio" name="activityLevel" value="low">Low = 0-1 hour per week.<br>
+          <input type="radio" name="activtyLevel" value="medium">Medium = 2-4 hours per week.<br>
+          <input type="radio" name="activityLevel" value="high">High = 5+ hours per week.
+        </div>
+        <div class="form-group">
+          <label for="injuries" >Do you have any injuries?  Select all that apply.<br>
+          <input type="checkbox" name="injury" value="none"> No injuries.<br>
+          <input type="checkbox" name="injury" value="NA"> Prefer not to say.<br>
+          <input type="checkbox" name="injury" value="knee"> Knee<br>
+          <input type="checkbox" name="injury" value="backneck"> Back/Neck<br>
+          <input type="checkbox" name="injury" value="wrist"> Wrist<br>
+          <input type="checkbox" name="pets" value="Other"> Other<br>
+        </div>
+        <div class="form-group">
+          <label for="goal" >What would you like to get out of your flow?  Select all that apply.<br>
+          <input type="checkbox" name="goal" value="rest"> Relaxation and restoration.<br>
+          <input type="checkbox" name="goal" value="exercise"> A workout.<br>
+          <input type="checkbox" name="goal" value="flexibility"> Improved flexibility.<br>
+          <input type="checkbox" name="goal" value="balance"> Improved balance.<br>
+        </div>
+        <div class="form-group">
+          <label for="frequency"
+            >How often do you practice yoga? <span class="form-group-required">*</span></label
+          >
+          <br>
+          <input type="radio" name="frequency" value="monthly">Once per month.<br>
+          <input type="radio" name="frequency" value="biweekly">Once every other week<br>
+          <input type="radio" name="frequency" value="weekly">Once per week.<br>
+          <input type="radio" name="frequency" value="frequent">Two or three times per week.<br>
+          <input type="radio" name="frequency" value="daily">Daily.
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <footer>
+      <div>
+        <h4>Popular</h4>
+        <ul class="footerul">
+          <li><a class="active" href="glossary.html">Glossary</a></li>
+          <li><a href="quiz.html">Quiz</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow Us</h4>
+        <ul class="footerulsocial">
+          <li>
+            <a href="https://giphy.com/clips/justin-MEdRTaYvZBlVMEjwZ3">
+              <i class="fa-brands fa-square-facebook"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://media.giphy.com/media/18trqWNZnu33q/giphy.gif">
+              <i class="fa-brands fa-square-instagram"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://giphy.com/clips/viralhog-W2j553r7gPinUhOrvJ">
+              <i class="fa-brands fa-square-twitter"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h4>LOGO</h4>
+        <img
+          class="logo"
+          src=""
+          height="60%"
+          width="60%"
+          alt="YogaMatch Logo."
+        />
+      </div>
+    </footer>
   </body>
 </html>

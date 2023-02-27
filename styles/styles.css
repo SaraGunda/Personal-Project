@@ -34,8 +34,8 @@ h3 {
     font-size: 1.6rem;
     font-weight: 300;
     margin-bottom: 3%;
-    /* ADD YOUR OWN CODE BELOW */
     text-align: center;
+    font-family: "permanent marker";
 }
 
 .form-group {
@@ -52,6 +52,7 @@ h3 {
 body {
     background-color: var(--teal);
     color: var(--grey);
+    /* background-image:  */
     font-family:'Tajawal';
     line-height: 25px;
     font-size: 1.1rem;
