@@ -38,6 +38,15 @@ h3 {
     font-family: "permanent marker";
 }
 
+h4 {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin-bottom: 3%;
+    text-align: center;
+    font-family: "Tajawal"; 
+}
+
 .form-group {
     margin: 0 0 2% 0;
     min-width: 100%;
@@ -113,10 +122,12 @@ footer {
     font-family: 'Tajawal';
 }
 
-.footerul {
+.footerul,
+.profSideLinks {
     list-style-type: none;
     padding-left: 0;
     font-family: 'Tajawal';
+    text-transform: uppercase;
 }
 
 .footerulsocial {
@@ -126,3 +137,28 @@ footer {
     padding-left: 0;
 }
 
+/* profile page  */
+.placeHolder {
+    max-width: 500px;
+    width: 100%;
+}
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+	text-transform: uppercase;
+    font-family: 'Tajawal';
+    padding: 4%;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .profile {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-left: 3%;
+    }
+}
+
+/* bio - about page  */
