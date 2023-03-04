@@ -16,6 +16,7 @@ body {
     font-family:'Tajawal';
     line-height: 25px;
     font-size: 1.1rem;
+    border: none;
 }
 
 /* loginpage */
@@ -130,6 +131,9 @@ footer {
     justify-content: space-around;
     flex-wrap: wrap;
     font-family: 'Tajawal';
+    position: absolute;
+    bottom: 0;
+    width: 100%;  
 }
 
 .footerul,
