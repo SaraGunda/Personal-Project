@@ -8,11 +8,30 @@
     --dark-purple: #84589c;
 }
 
+body {
+    background-color: var(--teal);
+    color: var(--grey);
+    background-image: url(/Images/backgrounds/layered-waves-haikei.png);
+    background-size: 100%;
+    font-family:'Tajawal';
+    line-height: 25px;
+    font-size: 1.1rem;
+}
+
 /* loginpage */
 .container {
     max-width: 500px;
     width: 100%;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    padding: 2% 5% 5% 5%;
+    background-color: var(--light-grey);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    opacity: 0.8;
 }
 
 form {
@@ -56,15 +75,6 @@ h4 {
 
 .form-group-required {
     color: var(--dark-purple);
-}
-
-body {
-    background-color: var(--teal);
-    color: var(--grey);
-    /* background-image:  */
-    font-family:'Tajawal';
-    line-height: 25px;
-    font-size: 1.1rem;
 }
 
 button[type="submit"] {
