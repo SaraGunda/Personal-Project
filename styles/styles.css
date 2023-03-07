@@ -59,6 +59,23 @@ body {
     position: relative;
 }
 
+a:link {
+    color: var(--white);
+    text-decoration: none; 
+}
+
+a:visited {
+    color: var(--medium-grey);
+}
+
+a:hover {
+    color:var(--teal);
+}
+
+a:active {
+    color:var(--medium-grey);
+}
+
 /* loginpage */
 .loginContainer{
     max-width: 500px;
@@ -94,6 +111,7 @@ h1 {
     text-align: center;
     font-family: "permanent marker";
 }
+
 
 h2 {
     text-transform: uppercase;
