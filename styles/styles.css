@@ -18,8 +18,8 @@
 body {
     background-color: var(--teal);
     color: var(--grey);
-    background-image: url(/Images/backgrounds/pexels-ovan-62693.jpg);
-    background-size: 100%;
+    /* background-image: url(/Images/backgrounds/pexels-ovan-62693.jpg); */
+    /* background-size: 100%; */
     font-family:'Tajawal';
     line-height: 25px;
     font-size: 1.1rem;
@@ -63,7 +63,7 @@ body {
     background-color: var(--light-grey);
     opacity: 0.9;
     position: relative;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 @media screen and (min-width: 320px) and (max-width: 768px) {
@@ -143,6 +143,8 @@ h2 {
     padding: 0;
     width: 100%;
     font-family: 'Tajawal';
+    text-transform: uppercase;
+    font-size: 1rem;
 }
 
 .form-group-required {
@@ -267,10 +269,12 @@ footer {
 
 .LSideImage{
     width: 50%;
+    margin: 1%;
 }
 
 .sideImage{
     width: 100%;
+    margin: 1%;
 }
 
 .indexImage {
@@ -301,11 +305,11 @@ footer {
 }
 
 /* Quiz */
-/* .formcontainer{
+.formcontainer{
     display: flex;
     align-items: center;
     justify-content: center;
-} */
+}
 
 
 
