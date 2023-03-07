@@ -13,7 +13,7 @@
 5. keep image place holder, but apply links
 6. js - hamburger menu and back to top screen
 /* 7. insert logo */
-/* footer to stay at bottom  */
+
 
 body {
     background-color: var(--teal);
@@ -108,6 +108,7 @@ form {
     padding: 2% 5% 5% 5%;
     margin: 5% 0;
     border-radius: 8px;
+    width: 70%;
     /* max-width: 500px; */
 }
 
@@ -141,12 +142,14 @@ h2 {
     min-width: 100%;
     padding: 0;
     width: 100%;
+    font-family: 'Tajawal';
 }
 
 .form-group-required {
     color: var(--dark-purple);
 }
 
+.topBtn,
 button[type="submit"] {
     background-color: var(--light-purple);
     color: var(--white);
@@ -157,10 +160,12 @@ button[type="submit"] {
     font-size: 1rem;
 }
 
+.topBtn,
 button[type="submit"]:hover {
     background-color: var(--dark-purple);
 }
 
+.topbtn,
 button[type="submit"]:active {
     outline: none;
 }
@@ -294,4 +299,13 @@ footer {
         display: none;
     }
 }
+
+/* Quiz */
+/* .formcontainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+
 
