@@ -8,6 +8,14 @@
     --dark-purple: #84589c;
 }
 
+/* 1. get background and foot to stay at bottom--> container on all pages */
+/* 2. get rid of small border around page  */
+/* 3. proper size for background img  */
+/* 4. index page and glossary!!! finish up content!!!!
+5. keep image place holder, but apply links
+6. js - hamburger menu and back to top screen
+/* 7. insert logo */
+
 body {
     background-color: var(--teal);
     color: var(--grey);
@@ -17,22 +25,39 @@ body {
     line-height: 25px;
     font-size: 1.1rem;
     border: none;
+    padding-bottom: 2.5rem;
 }
 
-/* loginpage */
+
 .container{
     max-width: 500px;
     width: 100%;
-    margin: 0 auto;
+    margin: 2em auto;
     display: flex;
     flex-direction: column;
     padding: 2em;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
     padding: 5% 5% 5% 5%;
     background-color: var(--light-grey);
-    opacity: 0.8;
+    opacity: 0.9;
+    position: relative;
 }
 
+.dividedContainer{
+    max-width: 500px;
+    width: 100%;
+    margin: 2em auto;
+    display: flex;
+    flex-direction: row;
+    padding: 2em;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    padding: 5% 5% 5% 5%;
+    background-color: var(--light-grey);
+    opacity: 0.9;
+    position: relative;
+}
+
+/* loginpage */
 .loginContainer{
     max-width: 500px;
     width: 100%;
@@ -58,7 +83,8 @@ label {
     text-transform: uppercase;
 }
 
-h3 {
+
+h1 {
     text-transform: uppercase;
     font-size: 1.6rem;
     font-weight: 300;
@@ -67,7 +93,7 @@ h3 {
     font-family: "permanent marker";
 }
 
-h4 {
+h2 {
     text-transform: uppercase;
     font-size: 1.6rem;
     font-weight: 300;
@@ -140,7 +166,6 @@ footer {
     justify-content: space-around;
     flex-wrap: wrap;
     font-family: 'Tajawal';
-    position: absolute;
     bottom: 0;
     width: 100%;  
 }
@@ -185,3 +210,18 @@ footer {
 }
 
 /* bio - about page  */
+
+/* index */
+.maintext {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    padding: 5%;
+    background-color: var(--light-grey);
+    opacity: 0.9;
+    position: relative;
+}
