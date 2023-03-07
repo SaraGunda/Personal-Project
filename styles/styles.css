@@ -9,13 +9,11 @@
 }
 
 
-/* 1. get background and foot to stay at bottom--> container on all pages */
-/* 2. get rid of small border around page  */
-/* 3. proper size for background img  */
-/* 4. index page and glossary!!! finish up content!!!!
+/* 4. index page finish up content!!!!
 5. keep image place holder, but apply links
 6. js - hamburger menu and back to top screen
 /* 7. insert logo */
+/* footer to stay at bottom  */
 
 body {
     background-color: var(--teal);
@@ -27,7 +25,6 @@ body {
     font-size: 1.1rem;
     border: none;
     margin: 0px;
-    padding-bottom: 2.5rem;
 }
 
 .welcomeContainer,
