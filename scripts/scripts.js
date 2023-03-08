@@ -27,3 +27,4 @@ function hamFunction() {
     }
   }
 
+//   hamburger not active 
