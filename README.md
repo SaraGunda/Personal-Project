@@ -1,12 +1,5 @@
 # Personal-Project
 
-Yoga website, quiz
 
-To do:
-
-- js form data? (WAIT ON THIS, UNTIL OBJECTS LESSON)
-- menu/navigation js, activate hamburger menu - js
-- activate all buttons as place holder for action - js
-  possibly break up quiz form - have active buttons to move on to next page/questions
-- complete content
-- form on quiz page - get center, font all the same? font larger? (will not update)
+Website Description:
+YogaMatch will take you through a quiz that will pair you with a custom yoga practice that you can watch and perform from home.  This will involve many js elements that are not currently applied to this project.  You will see placeholders and blank pages where these videos or saved playlists will be displayed and accessible.  The rest is coming soon!
