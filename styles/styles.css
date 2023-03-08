@@ -8,13 +8,6 @@
     --dark-purple: #84589c;
 }
 
-
-/* 4. index page finish up content!!!!
-5. keep image place holder, but apply links
-6. js - hamburger menu and back to top screen
-/* 7. insert logo */
-
-
 body {
     background-color: var(--teal);
     color: var(--grey);
@@ -198,6 +191,27 @@ textarea:focus {
     font-family: 'Tajawal';
 }
 
+@media screen and (min-width: 769px) {
+	header {
+		display: flex;
+	}
+
+	.menu-icon {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .headerul{
+        display: none;
+    }
+
+    .menu-icon {
+        margin-left: 5%;
+    }
+}
+
+
 /* footer  */
 footer {
     background-color: var(--light-purple);
@@ -309,7 +323,5 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
-
-
-
