@@ -6,13 +6,23 @@
     target="_blank"
   >
     <fieldset class="loginfield">
+      <label>First Name</label>
+      <input
+        type="text"
+        name="firstName"
+        id="firstName"
+        minlength="1"
+        required
+      />
+      <label>Last Name</label>
+      <input type="text" name="lastName" id="lastName" />
       <label>Email Address:</label>
       <input type="text" name="email" id="email" minlength="4" required />
       <p>
         <label>Password:</label>
         <input
           type="text"
-          name="password"
+          firstName="password"
           id="password"
           minlength="8"
           required
