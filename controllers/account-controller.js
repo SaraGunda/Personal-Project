@@ -1,8 +1,16 @@
-const accountController = require("./account-controller.js");
+const express = require("express");
+const data = require("../data/data");
 
-//Routes for reference
-// router.route("/accountSettings").get(accountController.accountSettings);
-// router.route("/profile").get.apply(accountController.profile);
-// router.route("/saved").get(accountController.saved);
-// logout??
-
+module.exports = {
+  accountSettings: (request, response) => {
+    response.render("pages/accountSettings");
+  },
+  account: (request, response) => {
+    response.render("pages/account", {
+        data: data
+    });
+  },
+  saved: (request, response) => {
+    response.render("pages/saved");
+  },
+};

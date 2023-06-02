@@ -1,7 +1,7 @@
-const adminController = require('./admin-controller.js');
+// const adminController = require('./admin-controller.js');
 
 
-module.exports = {
+// module.exports = {
 //   admin: (request, response) => {
 //     if (request.isAuthenticated()) {
 //       X.find({}).then((X) => {
@@ -14,11 +14,11 @@ module.exports = {
 //     }
 //   },
 
-  admin_edit: (request, response) => {
-    if (request.isAuthenticated()) {
-      response.render("pages/collections/edit");
-    } else {
-      response.redirect("/login");
-    }
-  },
-};
+//   admin_edit: (request, response) => {
+//     if (request.isAuthenticated()) {
+//       response.render("pages/collections/edit");
+//     } else {
+//       response.redirect("/login");
+//     }
+//   },
+// };

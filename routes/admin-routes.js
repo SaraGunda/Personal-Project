@@ -1,16 +1,16 @@
-const express = require("express");
-const router = express.Router();
-const adminController = require("../controllers/admin-controller.js");
+// const express = require("express");
+// const router = express.Router();
+// const adminController = require("../controllers/admin-controller.js");
 
 
-router.route('/')
-    .get(adminController.admin);
+// router.route('/')
+//     .get(adminController.admin);
 
-router.route('/edit')
-    .get(adminController.admin_edit);
+// router.route('/edit')
+//     .get(adminController.admin_edit);
 
-// logout?    
+// // logout?    
 
-module.exports = router;
+// module.exports = router;
 
 

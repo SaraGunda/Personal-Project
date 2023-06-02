@@ -1,11 +1,11 @@
 const express = require("express");
 const router = express.Router();
-const adminController = require("../controllers/admin-controller.js");
+const accountController = require("../controllers/account-controller.js");
 
 router.route("/accountSettings").get(accountController.accountSettings);
 
-router.route("/profile").get.apply(accountController.profile);
+router.route("/account").get(accountController.account);
 
 router.route("/saved").get(accountController.saved);
 
-// logout?
+module.exports = router;

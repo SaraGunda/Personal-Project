@@ -5,7 +5,7 @@
           <i class="fa-solid fa-user fa-5x"></i>
           <h2 style="margin-top: 0.25em;">Profile Image</h2>  
         </div>
-        <h1>Welcome back!</h1>
+        <h1>Welcome back, <%- data[1].firstName -%> !</h1>
         <ul class="profSideLinks">
           <li><a href="/accountsettings">Account Settings</a></li>
           <li><a href="/saved">Saved</a></li>
@@ -20,5 +20,4 @@
         </p>
       </div>
     </div>
-    <%-
-    include('../partials/footer') -%>
+    <%-include('../partials/footer') -%>
