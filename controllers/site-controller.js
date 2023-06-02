@@ -9,6 +9,9 @@ module.exports = {
   },
   glossary: (request, response) => {
     response.render("pages/glossary");
+  },
+  quiz: (request, response) => {
+    response.render("pages/quiz");
   }
 };
 

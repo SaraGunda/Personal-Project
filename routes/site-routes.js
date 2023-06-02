@@ -9,6 +9,7 @@ router.route("/about").get(siteController.about);
 
 router.route("/glossary").get(siteController.glossary);
 
+router.route("/quiz").get(siteController.quiz);
 // router
 //   .route("/login")
 //   .get(siteController.login_get)
