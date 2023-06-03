@@ -1,4 +1,6 @@
 const express = require("express");
+const User = require("../models/user-model");
+const data = require("../data/data");
 
 module.exports = {
   index: (request, response) => {
@@ -10,42 +12,33 @@ module.exports = {
   glossary: (request, response) => {
     response.render("pages/glossary");
   },
-  quiz: (request, response) => {
-    response.render("pages/quiz");
-  },
-  login: (request, response) => {
+  login_get: (request, response) => {
     response.render("pages/login");
   },
-  register: (request, response) => {
-    response.render("pages/register");
-  },
-
-  login_get: (request, response) => {
-    response.render("pages/login", {});
-  },
   login_post: (request, response) => {
-    const { username, password } = request.body;
+    const { email, password } = request.body;
     const user = new User({
-      username: username,
+      email: email,
       password: password,
     });
+    // User.findOne({ email: email }).then((foundUser, error) => {
     request.login(user, (error) => {
       if (error) {
         console.log(error);
         response.redirect("/login");
       } else {
         passport.authenticate("local")(request, response, () => {
-          response.redirect("/admin-console");
+          response.redirect("/user-account");
         });
       }
     });
   },
   register_get: (request, response) => {
-    response.render("pages/register", {});
+    response.render("pages/register");
   },
   register_post: (request, response) => {
-    const { username, password } = request.body;
-    User.register({ username: username }, password, (error, user) => {
+    const { email, password } = request.body;
+    User.register({ email: email }, password, (error, user) => {
       if (error) {
         console.log(error);
         response.redirect("/register");

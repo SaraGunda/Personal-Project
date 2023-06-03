@@ -1,5 +1,6 @@
 const data = require("../data/data");
 
+
 module.exports = {
   accountSettings: (request, response) => {
     response.render("pages/accountSettings");
