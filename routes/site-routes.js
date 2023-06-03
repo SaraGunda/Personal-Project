@@ -26,7 +26,7 @@ router
 // router.route("/auth/google").get(siteController.google_get);
 
 // router
-//   .route("/auth/google/admin-console")
+//   .route("/auth/google/user-account")
 //   .get(siteController.google_redirect_get);
 
 module.exports = router;

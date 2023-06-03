@@ -1,4 +1,3 @@
-// define quiz data
 const mongoose = require("mongoose");
 const passport = require("passport");
 const passportLocalMongoose = require("passport-local-mongoose");
@@ -6,37 +5,35 @@ const { Schema } = mongoose;
 let GoogleStrategy = require("passport-google-oauth20").Strategy;
 const findOrCreate = require("mongoose-findorcreate");
 
-const resultsSchema = new Schema({
-  warmup: {
+const quizSchema = new Schema({
+  firstName: {
     type: String,
   },
-  sunA: {
+  dob: {
     type: String,
   },
-  sunB: {
+  activityLevel: {
     type: String,
   },
-  cardio: {
+  injury: {
+    type: String, 
+    // (or array? may have multiple)
+  },
+  goal: {
     type: String,
   },
-  balance: {
-    type: String,
-  },
-  floorStretch: {
-    type: String,
-  },
-  supineAndShavasana: {
+  frequency: {
     type: String,
   },
 });
 
-resultsSchema.plugin(passportLocalMongoose);
-resultsSchema.plugin(findOrCreate);
+quizSchema.plugin(passportLocalMongoose);
+quizSchema.plugin(findOrCreate);
 
-// const User = mongoose.model("User", resultsSchema);
+// const User = mongoose.model("User", quizSchema);
 // async function run() {
 //   await mongoose.connect(`${process.env.DB_URL}`);
-//   mongoose.model("User", resultsSchema);
+//   mongoose.model("User", quizSchema);
 //   await mongoose.model("User").findOne();
 // }
 // run();
@@ -76,4 +73,3 @@ resultsSchema.plugin(findOrCreate);
 // );
 
 module.exports = User;
-

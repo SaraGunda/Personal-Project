@@ -1,4 +1,3 @@
-const express = require("express");
 const data = require("../data/data");
 
 module.exports = {

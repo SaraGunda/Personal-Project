@@ -71,7 +71,7 @@ module.exports = {
   // google_redirect_get: [
   //   passport.authenticate("google", { failureRedirect: "/login" }),
   //   function (request, response) {
-  //     response.redirect("/admin-console");
+  //     response.redirect("/user-account");
   //   },
   // ],
 };
