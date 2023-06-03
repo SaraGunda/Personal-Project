@@ -10,17 +10,18 @@ router.route("/about").get(siteController.about);
 router.route("/glossary").get(siteController.glossary);
 
 router.route("/quiz").get(siteController.quiz);
-// router
-//   .route("/login")
-//   .get(siteController.login_get)
-//   .post(siteController.login_post);
 
-// router.route("/logout").get(siteController.logout);
+router
+  .route("/login")
+  .get(siteController.login_get)
+  .post(siteController.login_post);
 
-// router
-//   .route("/register")
-//   .get(siteController.register_get)
-//   .post(siteController.register_post);
+router.route("/logout").get(siteController.logout);
+
+router
+  .route("/register")
+  .get(siteController.register_get)
+  .post(siteController.register_post);
 
 // router.route("/auth/google").get(siteController.google_get);
 

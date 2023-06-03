@@ -12,31 +12,66 @@ module.exports = {
   },
   quiz: (request, response) => {
     response.render("pages/quiz");
-  }
+  },
+  login: (request, response) => {
+    response.render("pages/login");
+  },
+  register: (request, response) => {
+    response.render("pages/register");
+  },
+
+  login_get: (request, response) => {
+    response.render("pages/login", {});
+  },
+  login_post: (request, response) => {
+    const { username, password } = request.body;
+    const user = new User({
+      username: username,
+      password: password,
+    });
+    request.login(user, (error) => {
+      if (error) {
+        console.log(error);
+        response.redirect("/login");
+      } else {
+        passport.authenticate("local")(request, response, () => {
+          response.redirect("/admin-console");
+        });
+      }
+    });
+  },
+  register_get: (request, response) => {
+    response.render("pages/register", {});
+  },
+  register_post: (request, response) => {
+    const { username, password } = request.body;
+    User.register({ username: username }, password, (error, user) => {
+      if (error) {
+        console.log(error);
+        response.redirect("/register");
+      } else {
+        passport.authenticate("local")(request, response, () => {
+          response.redirect("/login");
+        });
+      }
+    });
+  },
+  logout: (request, response) => {
+    request.logout(function (err) {
+      if (err) {
+        return next(err);
+      }
+      response.redirect("/");
+    });
+  },
+
+  // google_get: passport.authenticate("google", {
+  //   scope: ["openid", "profile", "email"],
+  // }),
+  // google_redirect_get: [
+  //   passport.authenticate("google", { failureRedirect: "/login" }),
+  //   function (request, response) {
+  //     response.redirect("/admin-console");
+  //   },
+  // ],
 };
-
-// // SITE ROUTES
-// router.route('/')
-//     .get(siteController.index);
-
-// // router.route('/about')
-// //     .get(siteController.about);
-
-// router.route('/login')
-//     .get(siteController.login)
-//     .post(siteController.login_post);
-
-// router.route('/logout')
-//     .get(siteController.logout);
-
-// router.route('/register')
-//     .get(siteController.register_get)
-//     .post(siteController.register_post);
-
-// router.route('/auth/google')
-//   .get(siteController.google_get);
-
-// router.route('/auth/google/admin-console')
-//   .get(siteController.google_redirect_get)
-
-// module.exports = router;
