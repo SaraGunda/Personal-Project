@@ -4,7 +4,6 @@ const { v4: uuid } = require("uuid");
 
 module.exports = [
   {
-    _id: uuid(),
     firstName: "Sara",
     age: "26-34",
     activityLevel: "high",
