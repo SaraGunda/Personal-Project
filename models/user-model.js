@@ -53,8 +53,7 @@ passport.use(
     {
       clientID: process.env.CLIENT_ID,
       clientSecret: process.env.CLIENT_SECRET,
-      callbackURL:
-        "https://nice-teal-kitten-sari.cyclic.app/auth/google/admin-console",
+      callbackURL: "http://localhost:3000/auth/google/user-account",
     },
     function (accessToken, refreshToken, email, cb) {
       console.log(email);

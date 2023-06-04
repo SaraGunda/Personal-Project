@@ -1,6 +1,7 @@
 const express = require("express");
 const User = require("../models/user-model");
 const data = require("../data/data");
+const passport = require("passport");
 
 module.exports = {
   index: (request, response) => {
@@ -58,13 +59,13 @@ module.exports = {
     });
   },
 
-  // google_get: passport.authenticate("google", {
-  //   scope: ["openid", "profile", "email"],
-  // }),
-  // google_redirect_get: [
-  //   passport.authenticate("google", { failureRedirect: "/login" }),
-  //   function (request, response) {
-  //     response.redirect("/user-account");
-  //   },
-  // ],
+  google_get: passport.authenticate("google", {
+    scope: ["openid", "profile", "email"],
+  }),
+  google_redirect_get: [
+    passport.authenticate("google", { failureRedirect: "/login" }),
+    function (request, response) {
+      response.redirect("/user-account");
+    },
+  ],
 };
