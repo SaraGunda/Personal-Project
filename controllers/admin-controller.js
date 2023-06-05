@@ -1,5 +1,5 @@
-const adminController = require('./admin-controller.js');
-
+// const adminController = require('./admin-controller.js');
+// const Admin = require("../models/admin-model");
 
 module.exports = {
   admin: (request, response) => {

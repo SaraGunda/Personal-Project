@@ -1,18 +1,18 @@
 :root {
-    --teal: #a0c3bd;
-    --grey: #666666;
-    --medium-grey: #CCCCCC;
+    --teal: #73d8c7;
+    --grey: #232323;
+    --medium-grey: #696868;
     --light-grey: #F9F9F9;
     --white: #ffffff;
-    --light-purple: #ba8fce;
-    --dark-purple: #84589c;
+    --light-purple: #f1aec2;
+    --dark-purple: #bea8a9;
 }
 
 body {
     background-color: var(--teal);
     color: var(--grey);
-    /* background-image: url(/Images/backgrounds/pexels-ovan-62693.jpg); */
-    /* background-size: 100%; */
+    background-image: url(/images/backgrounds/photo-1635257153190-6313ae8a9fdc.avif); 
+    background-size: 100%;
     font-family:'Tajawal';
     line-height: 25px;
     font-size: 1.1rem;
@@ -38,10 +38,6 @@ body {
     .container {
         width: 80%;
     }
-}
-
-.welcomeContainer{
-    align-items: center;
 }
 
 .dividedContainer{
@@ -95,6 +91,7 @@ a:active {
     background-color: none;
 }
 
+.googleContainer,
 form {
     background-color: var(--light-grey);
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
@@ -103,6 +100,12 @@ form {
     border-radius: 8px;
     width: 70%;
     /* max-width: 500px; */
+}
+
+.googleContainer,
+.welcomeContainer{
+    align-items: center;
+    text-align: center;
 }
 
 label {
