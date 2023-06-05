@@ -4,7 +4,7 @@ const accountController = require("../controllers/account-controller.js");
 
 router.route("/accountSettings").get(accountController.accountSettings);
 
-router.route("/").get(accountController.account);
+router.route("/:id").get(accountController.account);
 
 router.route("/saved").get(accountController.saved);
 

@@ -7,8 +7,11 @@ module.exports = {
     });
   },
   account: (request, response) => {
+    const id = request.params.id;
+    const foundUser = data.find((user) => user._id === String(id));
+    console.log(foundUser);
     response.render("pages/account", {
-      data: data,
+      data: foundUser,
     });
   },
   saved: (request, response) => {

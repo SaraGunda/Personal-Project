@@ -29,7 +29,7 @@ module.exports = {
         response.redirect("/login");
       } else {
         passport.authenticate("local")(request, response, () => {
-          response.redirect("/user-account");
+          response.redirect(`/user-account/${email}`);
         });
       }
     });
@@ -65,7 +65,7 @@ module.exports = {
   google_redirect_get: [
     passport.authenticate("google", { failureRedirect: "/login" }),
     function (request, response) {
-      response.redirect("/user-account");
+      response.redirect(`/user-account/${request.user.id}`);
     },
   ],
 };
