@@ -21,6 +21,9 @@ const userSchema = new Schema({
   googleId: {
     type: String,
   },
+  // results:{
+  // type: [],
+  // }
 });
 
 userSchema.plugin(passportLocalMongoose);
@@ -41,6 +44,7 @@ passport.serializeUser(function (user, cb) {
     cb(null, { id: user.id, username: user.username, name: user.displayName });
   });
 });
+// may need to change back
 
 passport.deserializeUser(function (user, cb) {
   process.nextTick(function () {
@@ -58,7 +62,7 @@ passport.use(
     function (accessToken, refreshToken, email, cb) {
       console.log(email);
       User.findOrCreate(
-        { googleId: email.id, username: email.displayName },
+        { googleId: email.id, email: email.displayName },
         function (err, user) {
           return cb(err, user);
         }

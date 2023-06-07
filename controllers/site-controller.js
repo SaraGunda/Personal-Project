@@ -17,9 +17,9 @@ module.exports = {
     response.render("pages/login");
   },
   login_post: (request, response) => {
-    const { email, password } = request.body;
+    const { username, password } = request.body;
     const user = new User({
-      email: email,
+      username: username,
       password: password,
     });
     // User.findOne({ email: email }).then((foundUser, error) => {
@@ -29,7 +29,7 @@ module.exports = {
         response.redirect("/login");
       } else {
         passport.authenticate("local")(request, response, () => {
-          response.redirect(`/user-account/${email}`);
+          response.redirect("/quiz");
         });
       }
     });
@@ -38,17 +38,21 @@ module.exports = {
     response.render("pages/register");
   },
   register_post: (request, response) => {
-    const { email, password } = request.body;
-    User.register({ email: email }, password, (error, user) => {
-      if (error) {
-        console.log(error);
-        response.redirect("/register");
-      } else {
-        passport.authenticate("local")(request, response, () => {
-          response.redirect("/login");
-        });
+    const { firstName, lastName, username, password } = request.body;
+    User.register(
+      { firstName: firstName, lastName: lastName, username: username },
+      password,
+      (error, user) => {
+        if (error) {
+          console.log(error);
+          response.redirect("/register");
+        } else {
+          passport.authenticate("local")(request, response, () => {
+            response.redirect("/login");
+          });
+        }
       }
-    });
+    );
   },
   logout: (request, response) => {
     request.logout(function (err) {

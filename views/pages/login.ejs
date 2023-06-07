@@ -1,17 +1,17 @@
 <%- include('../partials/head') -%> <%- include('../partials/navbar') -%>
 
 <div class="loginContainer">
-  <form action="" method="POST">
+  <form action="/login" method="POST">
     <h1>Login</h1>
     <div class="form-group">
-      <label for="email"
-        >Email Address <span class="form-group-required">*</span></label
+      <label for="username"
+        >Username<span class="form-group-required">*</span></label
       >
       <input
-        type="email"
-        name="email"
-        id="email"
-        placeholder="Your email address"
+        type="username"
+        name="username"
+        id="username"
+        placeholder="Your username"
         minlength="4"
         required
       />

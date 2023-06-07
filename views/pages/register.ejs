@@ -1,16 +1,38 @@
 <%- include('../partials/head') -%> <%- include('../partials/navbar') -%>
 
 <div class="loginContainer">
-  <form action="" method="POST">
+  <form action="/register" method="POST">
     <h1>Register</h1>
     <div class="form-group">
-      <label for="email"
+      <label for="firstName"
+        >First Name <span class="form-group-required">*</span></label
+      >
+      <input
+        type="firstName"
+        name="firstName"
+        id="firstName"
+        placeholder="First Name"
+        minlength="1"
+        required
+      />
+      <label for="lastName"
+        >Last Name <span class="form-group-required">*</span></label
+      >
+      <input
+        type="lastName"
+        name="lastName"
+        id="lastName"
+        placeholder="Last Name"
+        minlength="1"
+        required
+      />
+      <label for="username"
         >Email Address <span class="form-group-required">*</span></label
       >
       <input
-        type="email"
-        name="email"
-        id="email"
+        type="username"
+        name="username"
+        id="username"
         placeholder="Your email address"
         minlength="4"
         required
