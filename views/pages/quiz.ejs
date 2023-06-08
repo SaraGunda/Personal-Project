@@ -1,7 +1,7 @@
 <%- include('../partials/head') -%> <%- include('../partials/accountnav') -%>
 
 <div class="formContainer">
-      <form>
+      <form method="POST" action="/quiz/results/number">
         <h1>Find Your Flow</h1>
         <div class="form-group">
           <label for="name"
@@ -32,9 +32,9 @@
             >What is your activity level? <span class="form-group-required">*</span></label
           >
           <br>
-          <input type="radio" name="activityLevel" value="0">Low = 0-1 hour per week.<br>
+          <input type="radio" name="activityLevel" value="2">Low = 0-1 hour per week.<br>
           <input type="radio" name="activityLevel" value="1">Medium = 2-4 hours per week.<br>
-          <input type="radio" name="activityLevel" value="2">High = 5+ hours per week.
+          <input type="radio" name="activityLevel" value="0">High = 5+ hours per week.
         </div>
         <div class="form-group">
           <label for="injury" >Do you have any injuries?  Select all that apply.<br>

@@ -6,15 +6,29 @@
 <!-- awaiting playlist finalization, below is placeholder example -->
 
 <h1>Your Results</h1>
-
+<% if (score === 0) { %>
 <iframe
   width="560"
   height="315"
   src="https://www.youtube.com/embed/gk9gomwreZY"
   title="YouTube video player"
   frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allow="accelerometer; autoplay;
+  clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
   allowfullscreen
-></iframe>
+></iframe
+><% } else if (score > 0 && score < 5){ %>
+  <iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/watch?v=CiRvHMKzHq0"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay;
+  clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen
+></iframe <% } else { %> 
+  
+  <% } %>
 
 <%- include('../partials/footer') -%>
