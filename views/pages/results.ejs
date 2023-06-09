@@ -7,7 +7,7 @@
 
 <h1>Your Results</h1>
 <% if (score === 0) { %>
-<iframe
+<div class= "player"><iframe
   width="560"
   height="315"
   src="https://www.youtube.com/embed/gk9gomwreZY"
@@ -17,18 +17,27 @@
   clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
   allowfullscreen
 ></iframe
-><% } else if (score > 0 && score < 5){ %>
-  <iframe
+></div><% } else if (score > 0 && score < 5){ %>
+  <div class= "player"><iframe
   width="560"
   height="315"
-  src="https://www.youtube.com/watch?v=CiRvHMKzHq0"
+  src="https://www.youtube.com/embed/gk9gomwreZY"
   title="YouTube video player"
   frameborder="0"
   allow="accelerometer; autoplay;
   clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
   allowfullscreen
-></iframe <% } else { %> 
-  
+></iframe></div> <% } else { %> 
+  <div class= "player"><iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/gk9gomwreZY"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay;
+    clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+  ></iframe></div>
   <% } %>
 
 <%- include('../partials/footer') -%>
