@@ -159,7 +159,16 @@ h2 {
 }
 
 .btn,
-.topBtn,
+.topBtn {
+    background-color: var(--light-purple);
+    color: var(--white);
+    width: 100%;
+    border: none;
+    margin: 0 0 2% 0;
+    padding: 2%;
+    font-size: 1rem;
+}
+
 button[type="submit"] {
     background-color: var(--light-purple);
     color: var(--white);
@@ -171,13 +180,19 @@ button[type="submit"] {
 }
 
 .btn,
-.topBtn,
+.topBtn {
+    background-color: var(--dark-purple);
+}
+
 button[type="submit"]:hover {
     background-color: var(--dark-purple);
 }
 
 .btn,
-.topbtn,
+.topbtn{
+    outline: none;
+}
+
 button[type="submit"]:active {
     outline: none;
 }

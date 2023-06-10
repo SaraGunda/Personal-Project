@@ -69,7 +69,7 @@ module.exports = {
   google_redirect_get: [
     passport.authenticate("google", { failureRedirect: "/login" }),
     function (request, response) {
-      response.redirect(`/user-account/${request.user.id}`);
+      response.redirect("/quiz");
     },
   ],
 };
