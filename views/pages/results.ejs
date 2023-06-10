@@ -7,28 +7,84 @@
 
 <h1>Your Results</h1>
 <% if (score === 0) { %>
-<div class= "player"><iframe
-  width="560"
-  height="315"
-  src="https://www.youtube.com/embed/gk9gomwreZY"
-  title="YouTube video player"
-  frameborder="0"
-  allow="accelerometer; autoplay;
+<div class="container">
+  Based on your results, you're paired with a high-intensity flow. A
+  high-intensity yoga flow can be a great way to challenge yourself physically
+  and mentally. You'll begin your practice with a gentle warm-up to prepare your
+  body for the upcoming intensity, progressing to challenging poses that will
+  engage multiple muscle groups and require strength, balance, and flexibility.
+  <p>
+    This video is just a guide for your practice, based on your quiz responses.
+    Remember to listen to your body, modify poses as needed, and progress at a
+    pace that feels comfortable for you. If you're new to high-intensity
+    exercises, consider practicing under live guidance of an experienced yoga
+    teacher who can provide personalized guidance and ensure safety.
+  </p>
+</div>
+<div class="player">
+  <iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/gk9gomwreZY"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay;
   clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-  allowfullscreen
-></iframe
-></div><% } else if (score > 0 && score < 5){ %>
-  <div class= "player"><iframe
-  width="560"
-  height="315"
-  src="https://www.youtube.com/embed/gk9gomwreZY"
-  title="YouTube video player"
-  frameborder="0"
-  allow="accelerometer; autoplay;
+    allowfullscreen
+  ></iframe>
+</div>
+<% } else if (score > 0 && score < 5){ %>
+<div class="container">
+  Based on your results, you're paired with a medium-intensity flow. Introducing
+  a medium-intensity yoga flow can be a balanced approach that provides both
+  challenge and relaxation. You'll start with a gentle warm-up that will
+  incorporate gentle stretches and joint mobilization exercises. You'll complete
+  a mix of poses that work on strength, flexibility, and balance. Move mindfully
+  from one pose to the next, focusing on smooth transitions and maintaining a
+  steady pace. Pay attention to your breath and allow it to guide your
+  movements.
+  <p>
+    This video is just a guide for your practice, based on your quiz responses.
+    Remember to listen to your body, modify poses as needed, and honor your
+    personal limits. The medium-intensity flow should challenge you without
+    causing strain or discomfort. If you're new to yoga or have any specific
+    concerns, consider practicing under live guidance of a qualified yoga
+    instructor who can provide adjustments and guidance tailored to your needs.
+  </p>
+</div>
+<div class="player">
+  <iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/gk9gomwreZY"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay;
   clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-  allowfullscreen
-></iframe></div> <% } else { %> 
-  <div class= "player"><iframe
+    allowfullscreen
+  ></iframe>
+</div>
+<% } else { %>
+<div class="container">
+  Based on your results, you're paired with a low-intensity flow. This yoga flow
+  can be a gentle and soothing way to practice yoga while focusing on
+  relaxation, flexibility, and mindfulness. As you flow, take slow, deep
+  breaths, allowing your breath to guide you into a state of calmness and
+  presence. Flow smoothly between poses with gentle transitions, maintaining a
+  slow and deliberate pace. Instead of rushing from one pose to the next, take
+  your time to explore and find comfort in each position.
+  <p>
+    This video is just a guide for your practice, based on your quiz responses.
+    Use any additional props, such as an eye pillow or blanket, to enhance your
+    comfort and relaxation. Honor your body's needs, listen to any discomfort,
+    and make modifications accordingly. If you're new to yoga or have any
+    specific concerns, consider practicing under live guidance of a qualified
+    yoga instructor who can provide adjustments and guidance tailored to your
+    needs.
+  </p>
+</div>
+<div class="player">
+  <iframe
     width="560"
     height="315"
     src="https://www.youtube.com/embed/gk9gomwreZY"
@@ -37,7 +93,8 @@
     allow="accelerometer; autoplay;
     clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     allowfullscreen
-  ></iframe></div>
-  <% } %>
-
-<%- include('../partials/footer') -%>
+  ></iframe>
+</div>
+<% } %> <%- include('../partials/footer') -%>
+<!-- 
+"based on your quiz answers" -->

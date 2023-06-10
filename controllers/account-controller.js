@@ -19,6 +19,4 @@ module.exports = {
   },
 };
 
-// is authenticated?
-// how to store results?
-// where to transform results into playlist?
+
