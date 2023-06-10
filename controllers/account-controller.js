@@ -1,6 +1,6 @@
 const { MongoUnexpectedServerResponseError } = require("mongodb");
 const { domainToASCII } = require("url");
-const data = require("../data/data");
+const User = require("../models/user-model");
 
 module.exports = {
   accountSettings: (request, response) => {
@@ -18,9 +18,9 @@ module.exports = {
   // },
   account_get: (request, response) => {
     const { _id } = request.params;
-    Users.findOne({ _id: _id }).then((users) => {
+    User.findOne({ _id: _id }).then((user) => {
       response.render("pages/account", {
-        data: users,
+        data: user,
       });
     });
   },
@@ -28,6 +28,5 @@ module.exports = {
     response.render("pages/saved");
   },
 };
-
 
 // to do: account page set up, apply hamburger menu

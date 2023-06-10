@@ -1,6 +1,5 @@
 const express = require("express");
 const User = require("../models/user-model");
-const data = require("../data/data");
 const passport = require("passport");
 
 module.exports = {
@@ -22,16 +21,19 @@ module.exports = {
       username: username,
       password: password,
     });
-    // User.findOne({ email: email }).then((foundUser, error) => {
-    request.login(user, (error) => {
-      if (error) {
-        console.log(error);
-        response.redirect("/login");
-      } else {
-        passport.authenticate("local")(request, response, () => {
-          response.redirect("/quiz");
-        });
-      }
+    User.findOne({ username: username }).then((foundUser, error) => {
+      passport.authenticate("local")(request, response, () => {
+        response.redirect(`/quiz/${foundUser.id}`);
+      });
+      // request.login(user, (error) => {
+      //   if (error) {
+      //     console.log(error);
+      //     response.redirect("/login");
+      //   } else {
+
+      //       response.redirect(`/quiz/${user.id}`);
+      //
+      //   }
     });
   },
   register_get: (request, response) => {

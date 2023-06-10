@@ -1,8 +1,10 @@
+console.log("scripts.js");
+
 // button:
 let mybutton = document.getElementById("topBtn");
 
 window.onscroll = function () {
-  scrollFunction()
+  scrollFunction();
 };
 
 function scrollFunction() {
@@ -28,4 +30,4 @@ function hamFunction() {
   }
 }
 
-//   hamburger not active
+

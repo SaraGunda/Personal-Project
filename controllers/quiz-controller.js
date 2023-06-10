@@ -1,4 +1,5 @@
 const express = require("express");
+const User = require("../models/user-model");
 
 module.exports = {
   results: (request, response) => {
@@ -6,11 +7,15 @@ module.exports = {
   },
 
   quiz: (request, response) => {
-    response.render("pages/quiz");
+    const { _id } = request.params;
+      User.findOne({ _id: _id }).then((user) => {
+        response.render("pages/quiz", {
+          data: user,
+        });
+      });
   },
 
   results_post: (request, response) => {
-    console.log(request.body);
     const score =
       Number(request.body.age) +
       Number(request.body.activityLevel) +
