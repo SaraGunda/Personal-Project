@@ -5,7 +5,7 @@ const User = require("../models/user-model");
 module.exports = {
   accountSettings: (request, response) => {
     response.render("pages/accountSettings", {
-      data: data,
+      data: user,
     });
   },
   // account: (request, response) => {
@@ -24,9 +24,9 @@ module.exports = {
       });
     });
   },
-  saved: (request, response) => {
-    response.render("pages/saved");
-  },
+  // saved: (request, response) => {
+  //   response.render("pages/saved");
+  // },
 };
 
 // to do: account page set up, apply hamburger menu

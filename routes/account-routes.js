@@ -9,6 +9,6 @@ router
   //   .get(accountController.account)
   .get(accountController.account_get);
 
-router.route("/saved").get(accountController.saved);
+// router.route("/saved").get(accountController.saved);
 
 module.exports = router;

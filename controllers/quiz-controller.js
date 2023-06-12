@@ -1,9 +1,12 @@
+const { MongoUnexpectedServerResponseError } = require("mongodb");
 const express = require("express");
 const User = require("../models/user-model");
 
 module.exports = {
   results: (request, response) => {
-    response.render("pages/results");
+    response.render("pages/results", {
+      data: user,
+    });
   },
 
   quiz: (request, response) => {
@@ -24,6 +27,7 @@ module.exports = {
       Number(request.body.frequency);
     console.log(score);
     response.render("pages/results", {
+      data: user,
       score: score,
     });
   },
