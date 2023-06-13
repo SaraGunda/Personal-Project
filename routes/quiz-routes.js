@@ -6,7 +6,7 @@ router.route("/:_id").get(quizController.quiz);
 
 router.route("/results").get(quizController.results);
 
-router.route("/results/number").post(quizController.results_post);
+router.route("/results/:_id").post(quizController.results_post);
 
 module.exports = router;
 

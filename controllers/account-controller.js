@@ -4,8 +4,11 @@ const User = require("../models/user-model");
 
 module.exports = {
   accountSettings: (request, response) => {
-    response.render("pages/accountSettings", {
-      data: user,
+    const { _id } = request.params;
+    User.findOne({ _id: _id }).then((user) => {
+      response.render("pages/accountSettings", {
+        data: user,
+      });
     });
   },
   // account: (request, response) => {

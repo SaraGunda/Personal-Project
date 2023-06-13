@@ -4,21 +4,25 @@ const User = require("../models/user-model");
 
 module.exports = {
   results: (request, response) => {
-    response.render("pages/results", {
-      data: user,
+    const { _id } = request.params;
+    User.findOne({ _id: _id }).then((user) => {
+      response.render("pages/results", {
+        data: user,
+      });
     });
   },
 
   quiz: (request, response) => {
     const { _id } = request.params;
-      User.findOne({ _id: _id }).then((user) => {
-        response.render("pages/quiz", {
-          data: user,
-        });
+    User.findOne({ _id: _id }).then((user) => {
+      response.render("pages/quiz", {
+        data: user,
       });
+    });
   },
 
   results_post: (request, response) => {
+    const { _id } = request.params;
     const score =
       Number(request.body.age) +
       Number(request.body.activityLevel) +
@@ -26,9 +30,11 @@ module.exports = {
       Number(request.body.goal) +
       Number(request.body.frequency);
     console.log(score);
-    response.render("pages/results", {
-      data: user,
-      score: score,
+    User.findOne({ _id: _id }).then((user) => {
+      response.render("pages/results", {
+        data: user,
+        score: score,
+      });
     });
   },
 };
