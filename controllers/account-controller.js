@@ -3,22 +3,6 @@ const { domainToASCII } = require("url");
 const User = require("../models/user-model");
 
 module.exports = {
-  accountSettings: (request, response) => {
-    const { _id } = request.params;
-    User.findOne({ _id: _id }).then((user) => {
-      response.render("pages/accountSettings", {
-        data: user,
-      });
-    });
-  },
-  // account: (request, response) => {
-  //   const id = request.params.id;
-  //   const foundUser = data.find((user) => user._id === String(id));
-  //   console.log(foundUser);
-  //   response.render("pages/account", {
-  //     data: foundUser,
-  //   });
-  // },
   account_get: (request, response) => {
     const { _id } = request.params;
     User.findOne({ _id: _id }).then((user) => {

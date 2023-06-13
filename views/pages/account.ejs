@@ -1,24 +1,31 @@
 <%- include('../partials/head') -%> <%- include('../partials/accountnav') -%>
-    <div class="profile">
-      <div class profSideBar>
-        <div style="text-align: center;">
-          <i class="fa-solid fa-user fa-5x"></i>
-          <h2 style="margin-top: 0.25em;">Profile Image</h2>  
-        </div>
-        <h1>Welcome back, <%- data.firstName -%> !</h1>
-        <ul class="profSideLinks">
-          <li><a href="/user-account/accountSettings">Account Settings</a></li>
-          <!-- <li><a href="/user-account/saved">Saved</a></li> -->
-          <li><a href="/logout">Logout</a></li>
-        </ul>
-      </div>
-      <div class profMain>
-        <h1>Recents</h1>
-        <p>Your Personalized Flow #1</p>
-        <p>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL5KeO89GFSAAPBroqYFKZbcv8xLKJKM0l" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          
-        </p>
-      </div>
+<div class="profile">
+  <div class profSideBar>
+    <div style="text-align: center">
+      <i class="fa-solid fa-user fa-5x"></i>
+      <h2 style="margin-top: 0.25em">Profile Image</h2>
     </div>
-    <%-include('../partials/footer') -%>
+    <h1>Welcome back, <%- data.firstName -%> !</h1>
+    <ul class="profSideLinks">
+      <!-- <li><a href="/user-account/accountSettings">Account Settings</a></li> -->
+      <!-- <li><a href="/user-account/saved">Saved</a></li> -->
+      <li><a href="/logout">Logout</a></li>
+    </ul>
+  </div>
+  <div class profMain>
+    <h1>Recents</h1>
+    <p>Your Personalized Flow #1</p>
+    <p>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/videoseries?list=PL5KeO89GFSAAPBroqYFKZbcv8xLKJKM0l"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </p>
+  </div>
+</div>
+<%-include('../partials/footer') -%>
