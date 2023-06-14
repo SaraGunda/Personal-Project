@@ -10,7 +10,7 @@
 }
 
 body {
-    background-color: var(--teal);
+    background-color: var(--light-purple);
     color: var(--grey);
     background-image: url(/images/backgrounds/photo-1635257153190-6313ae8a9fdc.avif); 
     background-size: 100%;
@@ -111,7 +111,7 @@ body {
 }
 
 a:link {
-    color: var(--white);
+    color: var(--grey);
     text-decoration: none; 
 }
 
